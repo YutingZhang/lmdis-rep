@@ -54,7 +54,7 @@ To perform detection on other human face images, you can just put the images you
 ## Evaluation
 
 - Test the model on CelebA dataset `./one_step_test_celeba.sh`
-- Test the model on AFLW dataset `./one_step_test_celeba.sh`
+- Test the model on AFLW dataset `./one_step_test_aflw.sh`
 
 In `one_step_test_celeba.sh` or `one_step_test_aflw.sh`, you can specify `SPECIFIC_MODEL_DIR` as the path of folder saving the trained checkpoint, and `SNAPSHOT_ITER` as the number of snapshot step you would like to test. If the snaphot step is not specified, the script automatically test on the lastest checkpoint.
 
