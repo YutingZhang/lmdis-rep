@@ -59,6 +59,9 @@ download_data()
         echo "Warning! Please download CelebA data from http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html and have the Img folder in data/celeba_images/Img ..."
     fi
 
+    if [ ! -d "${DATA_DIR}/celeba_images/Img/img_align_celeba_png" ];then
+        echo "The CelebA official website provide images in jpg format in Img/img_align_celeba, if you want to do experiment on the CelebA png images, you can download them from http://files.ytzhang.net/lmdis-rep/release-v1/celeba/img_align_celeba_png.tar.gz and save the images in data/celeba_images/Img/img_align_celeba_png"
+    fi
 }
 
 # default to download all
