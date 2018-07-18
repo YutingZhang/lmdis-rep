@@ -60,4 +60,5 @@ In `one_step_test_celeba.sh` or `one_step_test_aflw.sh`, you can specify `SPECIF
 
 ## Remarks
 
-Models on other datasets and more code updates are coming soon. 
+- The landmarks outputs by our model are in the ordering of `yx` (not the usual `xy`).
+- Models on other datasets and more code updates are coming soon. 
