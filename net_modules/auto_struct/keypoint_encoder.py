@@ -152,11 +152,10 @@ class BasicFactory(BaseFactory):
             )
             use_lm_tps = tf.random_uniform([batch_size]) < lm_tps_random_th
             use_lm_tps = tf.zeros_like(use_lm_tps)
-            #im_t = tf.where(
-            #    tf.tile(tmf.expand_dims(use_lm_tps, axis=-1, ndims=3), [1] + im_shape[1:]),
-            #    im_t_1, im_t_2
-            #)
-            im_t = im_t_2
+            im_t = tf.where(
+                tf.tile(tmf.expand_dims(use_lm_tps, axis=-1, ndims=3), [1] + im_shape[1:]),
+                im_t_1, im_t_2
+            )
             aug_cache["use_lm_tps"] = use_lm_tps
 
             # ---- RANDOM SIMILARITY TRANSFORM ----

@@ -58,6 +58,13 @@ To perform detection on other human face images, you can just put the images you
 
 In `one_step_test_celeba.sh` or `one_step_test_aflw.sh`, you can specify `SPECIFIC_MODEL_DIR` as the path of folder saving the trained checkpoint, and `SNAPSHOT_ITER` as the number of snapshot step you would like to test. If the snaphot step is not specified, the script automatically test on the lastest checkpoint.
 
+## Visualization
+In `vis` folder, call the matlab function `vppAutoKeypointImageRecon(result_path, step, sample_ids, save_to_file, type_ids)`
+
+`result_path` is the folder saving training results, `step` is the training step you want to test on (the step must be saved in corresponding `test.snapshot` folder), `samples_ids` is the id of test samples you are interested in, `save_to_file` is whether you would like to save the visualization figures, `type_ids` is 'data-encoded' or 'recon-encoded'.
+
+For example, `vppAutoKeypointImageRecon('../results/celeba_10/', 220000, 1:20, false, 'data-encoded')` will visualize the discovered keypoints on test images 1~20 in test dataset.
+
 ## Remarks
 
 - The landmarks outputs by our model are in the ordering of `yx` (not the usual `xy`).

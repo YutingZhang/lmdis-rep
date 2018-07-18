@@ -193,13 +193,16 @@ class TPS:
             tf.concat([tf.zeros([num_batch, 3, 3], dtype=p.dtype), tf.transpose(p, [0, 2, 1])], axis=2),
         ], axis=1)  # [batch, num_keypoints+3, num_keypoints+3]
 
-        # W_inv = tf.matrix_inverse(W)
-        s, u, v = tf.svd(W)
-        s_inv = tf.where(s > 1e-4, 1/s, tf.zeros_like(s))
-        s_inv_m = tmf.diag_to_matrix(s_inv)
-        W_inv = tf.matmul(tf.matmul(u, s_inv_m), tf.transpose(v, [0, 2, 1]))
-        W_inv = tf.stop_gradient(W_inv)
+        if False:
+            W_inv = tf.matrix_inverse(W)
+        else:
+            # better stability for degenerated control points
+            s, u, v = tf.svd(W)
+            s_inv = tf.where(s > 1e-6, 1/s, tf.zeros_like(s))
+            s_inv_m = tmf.diag_to_matrix(s_inv)
+            W_inv = tf.matmul(tf.matmul(v, s_inv_m), tf.transpose(u, [0, 2, 1]))
 
+        W_inv = tf.stop_gradient(W_inv)
         T = TPS._solve_system_final(cp, fp, W_inv)
         return T
 
