@@ -21,6 +21,8 @@ For experiment on CelebA and AFLW dataset
 - [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_data.tar.gz) for pre-processed CelebA images, saved in the `data/celeba_data`.
 - The [AFLW](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_images.tar.gz) dataset of preprocessed images, so that the face is on the similar position as face in CelebA images, saved in `data/aflw_images` folder.
 - [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_data.tar.gz) for pre-processed AFLW images, saved in `data/aflw_data` folder.
+- The [CAT](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_images.tar.gz) dataset of preprocessed images, so that the face is on the similar position as face in CAT images, saved in `data/cat_images` folder.
+- [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_data.tar.gz) for pre-processed CAT images, saved in `data/cat_data` folder.
 
 ## Pretrained Models to download
 
@@ -28,7 +30,9 @@ The pretrained models for CelebA dataset can be obtained via [this link](http://
 
 The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image.
 
-Running `./download_celeba.sh` and `./download_aflw.sh` will automatically download pretrained models and data for experiment on each dataset. The pretrained model will be saved in `pretrained_results/celeba_10`, `pretrained_results/celeba_30`, `pretrained_results/aflw_10`, `pretrained_results/aflw_30`. And the data will be saved in `data/celeba_data`, `data/aflw_data`, `data/aflw_images`. Note that you should download the CelebA data by yourself into `data/celeba_images` 
+The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_pretrained_results.tar.gz), which detect 10 or 20 landmarks on the image.
+
+Running `./download_celeba.sh`, `./download_aflw.sh` and `./download_cat.sh` will automatically download pretrained models and data for experiment on each dataset. The pretrained model will be saved in `pretrained_results/celeba_10`, `pretrained_results/celeba_30`, `pretrained_results/aflw_10`, `pretrained_results/aflw_30`, `pretrained_results/cat_10`, `pretrained_results/cat_20` . And the data will be saved in `data/celeba_data`, `data/aflw_data`, `data/aflw_images`, `data/cat_data`, `data/cat_images`. Note that you should download the CelebA data by yourself into `data/celeba_images` 
 
 ## Demo on CelebA image samples using pre-trained model (quick demo)
 
@@ -50,13 +54,16 @@ To perform detection on other human face images, you can just put the images you
 - Train the model on CelebA dataset for 30 landmarks: `python exp-ae-celeba-mafl-30.py`
 - Train the model on AFLW dataset for 10 landmarks: `python exp-ae-aflw-10.py`, the AFLW is finetuned based on pretrained model for CelebA dataset, so we must have `pretrained_results/celeba_10` downloaded.
 - Train the model on AFLW dataset for 30 landmarks: `python exp-ae-aflw-30.py`, the AFLW is finetuned based on pretrained model for CelebA dataset, so we must have `pretrained_results/celeba_30` downloaded.
+- Train the model on CelebA dataset for 10 landmarks: `python exp-ae-cat-10.py`
+- Train the model on CelebA dataset for 30 landmarks: `python exp-ae-cat-20.py`
 
 ## Evaluation
 
 - Test the model on CelebA dataset `./one_step_test_celeba.sh`
 - Test the model on AFLW dataset `./one_step_test_celeba.sh`
+- Test the model on CAT dataset `./one_step_test_cat.sh`
 
-In `one_step_test_celeba.sh` or `one_step_test_aflw.sh`, you can specify `SPECIFIC_MODEL_DIR` as the path of folder saving the trained checkpoint, and `SNAPSHOT_ITER` as the number of snapshot step you would like to test. If the snaphot step is not specified, the script automatically test on the lastest checkpoint.
+In `one_step_test_celeba.sh`, `one_step_test_aflw.sh` and `one_step_test_cat.sh`, you can specify `SPECIFIC_MODEL_DIR` as the path of folder saving the trained checkpoint, and `SNAPSHOT_ITER` as the number of snapshot step you would like to test. If the snaphot step is not specified, the script automatically test on the lastest checkpoint.
 
 ## Visualization
 In `vis` folder, call the matlab function `vppAutoKeypointImageRecon(result_path, step, sample_ids, save_to_file, type_ids)`
