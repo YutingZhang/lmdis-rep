@@ -54,8 +54,8 @@ To perform detection on other human face images, you can just put the images you
 - Train the model on CelebA dataset for 30 landmarks: `python exp-ae-celeba-mafl-30.py`
 - Train the model on AFLW dataset for 10 landmarks: `python exp-ae-aflw-10.py`, the AFLW is finetuned based on pretrained model for CelebA dataset, so we must have `pretrained_results/celeba_10` downloaded.
 - Train the model on AFLW dataset for 30 landmarks: `python exp-ae-aflw-30.py`, the AFLW is finetuned based on pretrained model for CelebA dataset, so we must have `pretrained_results/celeba_30` downloaded.
-- Train the model on CelebA dataset for 10 landmarks: `python exp-ae-cat-10.py`
-- Train the model on CelebA dataset for 30 landmarks: `python exp-ae-cat-20.py`
+- Train the model on CAT dataset for 10 landmarks: `python exp-ae-cat-10.py`
+- Train the model on CAT dataset for 30 landmarks: `python exp-ae-cat-20.py`
 
 ## Evaluation
 
