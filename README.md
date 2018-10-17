@@ -3,6 +3,8 @@ Code for "Unsupervised Discovery of Object Landmarks as Structural Representatio
 
 Project page: http://www.ytzhang.net/projects/lmdis-rep/
 
+The code works with TensorFlow 1.7 (but not higher than 1.7) and Python 3.6 (or higher).
+
 ## Paper
 
 Yuting Zhang, Yijie Guo, Yixin Jin, Yijun Luo, Zhiyuan He, Honglak Lee,
