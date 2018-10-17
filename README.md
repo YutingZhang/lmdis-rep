@@ -5,6 +5,8 @@ Project page: http://www.ytzhang.net/projects/lmdis-rep/
 
 The code works with TensorFlow 1.7 (but not higher than 1.7) and Python 3.6 (or higher).
 
+Please email [Yuting Zhang](http://ytzhang.net/) if any of the download links are broken. 
+
 ## Paper
 
 Yuting Zhang, Yijie Guo, Yixin Jin, Yijun Luo, Zhiyuan He, Honglak Lee,
