@@ -30,7 +30,7 @@ For experiment on CelebA and AFLW dataset
 
 ## Pretrained Models to download
 
-The pretrained models for CelebA dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image. 
+The pretrained models for CelebA dataset can be obtained via <a href="http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz" target="_blank">this link</a>, which detect 10 or 30 landmarks on the image. 
 
 The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image.
 
