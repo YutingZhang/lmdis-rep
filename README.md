@@ -38,6 +38,10 @@ The pretrained models for AFLW dataset can be obtained via [this link](http://fi
 
 Running `./download_celeba.sh`, `./download_aflw.sh` and `./download_cat.sh` will automatically download pretrained models and data for experiment on each dataset. The pretrained model will be saved in `pretrained_results/celeba_10`, `pretrained_results/celeba_30`, `pretrained_results/aflw_10`, `pretrained_results/aflw_30`, `pretrained_results/cat_10`, `pretrained_results/cat_20` . And the data will be saved in `data/celeba_data`, `data/aflw_data`, `data/aflw_images`, `data/cat_data`, `data/cat_images`. Note that you should download the CelebA data by yourself into `data/celeba_images` 
 
+## Data and Model for Human3.6M
+
+Google Drive: [link](https://drive.google.com/drive/folders/1dFVEhg0UokpVK1ya5OJ7f7-Lxvrkc1Jz?usp=sharing)
+
 ## Demo on CelebA image samples using pre-trained model (quick demo)
 
 You can run a quick demo on CelebA images.
