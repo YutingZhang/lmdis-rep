@@ -23,7 +23,7 @@ For experiment on CelebA and AFLW dataset
 
 ## Data to download
 
-***For all the links, please copy the link and paste it in a new window to download. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
+***For all the links, <u>please copy the link and paste it in a new window to download</u>. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
 
 - The [CelebA](https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8) dataset, saved in the `data/celeba_images` folder.
 - [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_data.tar.gz) for pre-processed CelebA images, saved in the `data/celeba_data`.
@@ -34,7 +34,7 @@ For experiment on CelebA and AFLW dataset
 
 ## Pretrained Models to download
 
-***For all the links, please copy the link and paste it in a new window to download. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
+***For all the links, <u>please copy the link and paste it in a new window to download</u>. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
 
 The pretrained models for CelebA dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image. 
 
