@@ -14,12 +14,16 @@ Yuting Zhang, Yijie Guo, Yixin Jin, Yijun Luo, Zhiyuan He, Honglak Lee,
 *IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, June 2018. [[arxiv](https://arxiv.org/abs/1804.04412)]
 
 ## What are included
+
 For experiment on CelebA and AFLW dataset
+
 - Demo using pretrained models (detection and visualization on individual images)
 - Training code
 - Evaluation code
 
 ## Data to download
+
+***For all the links, please copy the link and paste it in a new window to download. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
 
 - The [CelebA](https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8) dataset, saved in the `data/celeba_images` folder.
 - [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_data.tar.gz) for pre-processed CelebA images, saved in the `data/celeba_data`.
@@ -30,11 +34,13 @@ For experiment on CelebA and AFLW dataset
 
 ## Pretrained Models to download
 
-The pretrained models for CelebA dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz) (Please copy the link and open it manually in new window), which detect 10 or 30 landmarks on the image. 
+***For all the links, please copy the link and paste it in a new window to download. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
 
-The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_pretrained_results.tar.gz) (Please copy the link and open it manually in new window), which detect 10 or 30 landmarks on the image.
+The pretrained models for CelebA dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image. 
 
-The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_pretrained_results.tar.gz) (Please copy the link and open it manually in new window), which detect 10 or 20 landmarks on the image.
+The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image.
+
+The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_pretrained_results.tar.gz), which detect 10 or 20 landmarks on the image.
 
 Running `./download_celeba.sh`, `./download_aflw.sh` and `./download_cat.sh` will automatically download pretrained models and data for experiment on each dataset. The pretrained model will be saved in `pretrained_results/celeba_10`, `pretrained_results/celeba_30`, `pretrained_results/aflw_10`, `pretrained_results/aflw_30`, `pretrained_results/cat_10`, `pretrained_results/cat_20` . And the data will be saved in `data/celeba_data`, `data/aflw_data`, `data/aflw_images`, `data/cat_data`, `data/cat_images`. Note that you should download the CelebA data by yourself into `data/celeba_images` 
 
@@ -47,11 +53,13 @@ Google Drive: [link](https://drive.google.com/drive/folders/1dFVEhg0UokpVK1ya5OJ
 You can run a quick demo on CelebA images.
 
 - Download our pretrained model on CelebA.
+
 - Put the pretrained model in the same directory as defined in `one_step_test_celeba_demo.sh`, the directory is `pretrained_results/celeba_10` or `pretrained_results/celeba_30`
+
 - After that, run
-	
-		./one_step_test_celeba_demo.sh
-	
+
+  	./one_step_test_celeba_demo.sh
+
 - You should be able to view the visualization of the landmark discovery results in the `demo/output` folder created under the root of the project. If `SPECIFIC_MODEL_DIR` is `pretrained_results/celeba_10`, there are 10 detected landmarked on each image. If `SPECIFIC_MODEL_DIR` is `pretrained_results/celeba_30`, there are 30 detected landmarked on each image. 
 
 To perform detection on other human face images, you can just put the images you are interested in into the `demo/input` folder, and rerun `./one_step_test_celeba_demo.sh` to see the detected landmarks on these images in `demo/output` folder.
@@ -74,6 +82,7 @@ To perform detection on other human face images, you can just put the images you
 In `one_step_test_celeba.sh`, `one_step_test_aflw.sh` and `one_step_test_cat.sh`, you can specify `SPECIFIC_MODEL_DIR` as the path of folder saving the trained checkpoint, and `SNAPSHOT_ITER` as the number of snapshot step you would like to test. If the snaphot step is not specified, the script automatically test on the lastest checkpoint.
 
 ## Visualization
+
 In `vis` folder, call the matlab function `vppAutoKeypointImageRecon(result_path, step, sample_ids, save_to_file, type_ids)`
 
 `result_path` is the folder saving training results, `step` is the training step you want to test on (the step must be saved in corresponding `test.snapshot` folder), `samples_ids` is the id of test samples you are interested in, `save_to_file` is whether you would like to save the visualization figures, `type_ids` is 'data-encoded' or 'recon-encoded'.
