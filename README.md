@@ -1,11 +1,11 @@
 Code for "Unsupervised Discovery of Object Landmarks as Structural Representations"
 =====
 
-Project page: http://www.ytzhang.net/projects/lmdis-rep/
+Project page: https://www.ytzhang.net/projects/lmdis-rep/
 
 The code works with TensorFlow 1.7 (but not higher than 1.7) and Python 3.6 (or higher).
 
-Please email [Yuting Zhang](http://ytzhang.net/) if any of the download links are broken. 
+Please email [Yuting Zhang](https://ytzhang.net/) if any of the download links are broken. 
 
 ## Paper
 
@@ -26,21 +26,21 @@ For experiment on CelebA and AFLW dataset
 ***For all the links, <u>please copy the link and paste it in a new window to download</u>. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
 
 - The [CelebA](https://drive.google.com/drive/folders/0B7EVK8r0v71pWEZsZE9oNnFzTm8) dataset, saved in the `data/celeba_images` folder.
-- [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_data.tar.gz) for pre-processed CelebA images, saved in the `data/celeba_data`.
-- The [AFLW](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_images.tar.gz) dataset of preprocessed images, so that the face is on the similar position as face in CelebA images, saved in `data/aflw_images` folder.
-- [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_data.tar.gz) for pre-processed AFLW images, saved in `data/aflw_data` folder.
-- The [CAT](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_images.tar.gz) dataset of preprocessed images, so that the face is on the similar position as face in CAT images, saved in `data/cat_images` folder.
-- [ground truth landmark annotation](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_data.tar.gz) for pre-processed CAT images, saved in `data/cat_data` folder.
+- [ground truth landmark annotation](https://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_data.tar.gz) for pre-processed CelebA images, saved in the `data/celeba_data`.
+- The [AFLW](https://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_images.tar.gz) dataset of preprocessed images, so that the face is on the similar position as face in CelebA images, saved in `data/aflw_images` folder.
+- [ground truth landmark annotation](https://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_data.tar.gz) for pre-processed AFLW images, saved in `data/aflw_data` folder.
+- The [CAT](https://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_images.tar.gz) dataset of preprocessed images, so that the face is on the similar position as face in CAT images, saved in `data/cat_images` folder.
+- [ground truth landmark annotation](https://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_data.tar.gz) for pre-processed CAT images, saved in `data/cat_data` folder.
 
 ## Pretrained Models to download
 
 ***For all the links, <u>please copy the link and paste it in a new window to download</u>. (Direct clicking the link may not work due to GitHub's way to handle links with redirection)*** 
 
-The pretrained models for CelebA dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image. 
+The pretrained models for CelebA dataset can be obtained via [this link](https://files.ytzhang.net/lmdis-rep/release-v1/celeba/celeba_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image. 
 
-The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image.
+The pretrained models for AFLW dataset can be obtained via [this link](https://files.ytzhang.net/lmdis-rep/release-v1/aflw/aflw_pretrained_results.tar.gz), which detect 10 or 30 landmarks on the image.
 
-The pretrained models for AFLW dataset can be obtained via [this link](http://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_pretrained_results.tar.gz), which detect 10 or 20 landmarks on the image.
+The pretrained models for AFLW dataset can be obtained via [this link](https://files.ytzhang.net/lmdis-rep/release-v1/cat/cat_pretrained_results.tar.gz), which detect 10 or 20 landmarks on the image.
 
 Running `./download_celeba.sh`, `./download_aflw.sh` and `./download_cat.sh` will automatically download pretrained models and data for experiment on each dataset. The pretrained model will be saved in `pretrained_results/celeba_10`, `pretrained_results/celeba_30`, `pretrained_results/aflw_10`, `pretrained_results/aflw_30`, `pretrained_results/cat_10`, `pretrained_results/cat_20` . And the data will be saved in `data/celeba_data`, `data/aflw_data`, `data/aflw_images`, `data/cat_data`, `data/cat_images`. Note that you should download the CelebA data by yourself into `data/celeba_images` 
 
